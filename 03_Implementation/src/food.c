@@ -1,6 +1,6 @@
 #include <food.h>
 
-void cls(){
+/*void cls(){
 
 	system("cls");
 
@@ -124,7 +124,7 @@ void insertmid(int pos, int data, char foodname[25], int quantity, float price){
 	head->next = temp ;
 
 	//    free(temp);
-}
+}*/
 
 int deletefood(int serial){
 
@@ -171,7 +171,7 @@ int deletefood(int serial){
 	return 1;
 }
 
-void updatefood(int udata, int uquantity){
+/*void updatefood(int udata, int uquantity){
 
 	node *temp;
 	temp = list;
@@ -410,4 +410,4 @@ void middle1(void){
 
 void middtab1(void){
 	printf("\t\t\t\t\t");
-}
+}*/
