@@ -125,6 +125,15 @@ void insertmid(int pos, int data, char foodname[25], int quantity, float price){
 
 	//    free(temp);
 }*/
+struct Node{
+
+	char foodname[50];
+	int quantity;
+	float price;
+	int data;
+	struct Node *next;
+
+};
 
 int deletefood(int serial){
 
