@@ -176,14 +176,17 @@ int main(){
                       scanf("%d",&fdata);
                             node *exist;
                             exist = list;
-                      while(exist->data!=fdata){
+                      while(exist->data!=fdata)
+                      {
                             if(exist->next==NULL){
                                 break;
                             }
                         exist=exist->next;
                       }
-                      if(exist->data==fdata){
-                       cls(); br(5);pre(3);  printf(" Food Serial Already Exist, Please Re-Enter  "); //Sleep(2000);
+                      if(exist->data==fdata)
+                        {
+                       cls(); br(5);pre(3);
+                      printf(" Food Serial Already Exist, Please Re-Enter  "); //Sleep(2000);
                        goto foodserial;
                       }
 
@@ -196,7 +199,10 @@ int main(){
 
 
 
-					br(2);pre(4);  printf("Submitting your data");for(int cs=0;cs<4;cs++){printf(" ."); //Sleep(500);}
+					br(2);pre(4);  printf("Submitting your data");
+					for(int cs=0;cs<4;cs++)
+					{
+					    printf(" ."); //Sleep(500);}
 
 
 					insertend(fdata,ffoodname,fquantity,fprice);
@@ -204,6 +210,7 @@ int main(){
 					br(2);pre(4);      printf("Adding Food  Successful....\n");
 
 					//Sleep(2000);
+				}
 
 					goto adminchoice;
 
@@ -257,7 +264,7 @@ int main(){
 						middle1(); pre(4);
 						printf("Item Counting ");
 						printf(" %d ",cs);
-						Sleep(150);
+						//Sleep(150);
 						cls();
 					}
 					cls();
@@ -278,7 +285,7 @@ int main(){
 					fptr=fopen(date,"w");
 					backuploader();
 					if(fptr==NULL){
-						br(3); pre(3); printf("Error!"); Sleep(500);
+						br(3); pre(3); printf("Error!"); //Sleep(500);
 						goto adminchoice;
 					}
 					fprintf(fptr,"Total Cash Today : %0.2f\n\n\n",totalmoney);
@@ -322,7 +329,7 @@ int main(){
 				}
 
 				else{
-					br(2); pre(4); printf("Please Select From List :  "); Sleep(500);
+					br(2); pre(4); printf("Please Select From List :  "); //Sleep(500);
 					goto adminchoice;
 				}
 
@@ -394,7 +401,7 @@ int main(){
 			goto foodlist;
 		}
 		else if(fcquantity>temp->quantity){
-			cls(); middle1();pre(3); printf("Out of Stock ! "); Sleep(2000);
+			cls(); middle1();pre(3); printf("Out of Stock ! "); //Sleep(2000);
 
 			goto foodlist;
 		}
@@ -667,50 +674,6 @@ void insertmid(int pos, int data, char foodname[25], int quantity, float price){
 	//    free(temp);
 }
 
-/*int deletefood(int serial){
-
-	node *temp;
-	temp=(node *)malloc(sizeof(node));
-
-	temp = list;
-
-
-	if(temp->data != serial){
-
-		while(temp->next->data != serial){
-			temp = temp->next;
-		}
-
-		if(temp->next->data == serial){
-
-			temp->next = temp->next->next;
-			cls();
-			printf("\n\n\n\n\t\t\tDeleting Item %d ",serial);for(int cs=0;cs<4;cs++){printf(" .");Sleep(400);}
-
-			printf("\n\n\n\n\t\t\tDeleted Successfully \n"); Sleep(500);
-
-		}
-		else{
-			printf("\n\n\n\n\t\t\tFood Item Not Found\n"); Sleep(500);
-		}
-
-		head = temp ;
-
-	}
-	else{
-
-		temp = temp->next;
-		cls();
-		printf("\n\n\n\n\t\t\tDeleting Item %d ",serial);for(int cs=0;cs<4;cs++){printf(" .");Sleep(400);}
-
-		printf("\n\n\n\n\t\t\tDeleted Successfully \n"); Sleep(500);
-
-		head = temp ;
-
-		list=head;
-	}
-	return 1;
-}*/
 
 void updatefood(int udata, int uquantity){
 
@@ -910,7 +873,7 @@ void loadingbar(void){
 			//ccolor(26);
 
 		}
-		Sleep(100);
+		//Sleep(100);
 		if(i==90 || i==50 || i==96 || i==83){
 			//Sleep(100);
 		}
@@ -927,23 +890,22 @@ void backuploader(void){
 
 		printf("\n\n\n\n\n\n\n\t\t\t\t");
 		printf("%d %% Backing UP DATA...\n\n\t\t",i);
-
-		printf("");
-
-		for (int j=0; j<i;j+=2){
+		}
+		}
+		/*for (int j=0; j<i;j+=2){
 
 			//ccolor(120+j);
 			printf(" ");
-			//ccolor(26);
+			//ccolor(26);*/
 
-		}
-		Sleep(50);
-		if(i==90 || i==50 || i==96 || i==83){
+
+		//Sleep(50);
+		/*if(i==90 || i==50 || i==96 || i==83){
 			//Sleep(50);
 		}
 	}
-
-}
+return;
+}*/
 
 
 void middle1(void){
