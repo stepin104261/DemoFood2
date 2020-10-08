@@ -5,7 +5,7 @@
 #include<stdlib.h>
 //#include<conio.h>
 #include<string.h>
-#include<windows.h>
+//#include<windows.h>
 #include<time.h>
 
 /// Update & Insert Function
@@ -31,7 +31,7 @@ void echo(char print[]);
 void br(int line);
 void pre(int tab);
 void span(int space);
-void ccolor(int clr);
+//void ccolor(int clr);
 void pwelcome();
 void loadingbar();
 void middle1(void);
