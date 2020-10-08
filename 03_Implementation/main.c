@@ -667,7 +667,7 @@ void insertmid(int pos, int data, char foodname[25], int quantity, float price){
 	//    free(temp);
 }
 
-int deletefood(int serial){
+/*int deletefood(int serial){
 
 	node *temp;
 	temp=(node *)malloc(sizeof(node));
@@ -710,7 +710,7 @@ int deletefood(int serial){
 		list=head;
 	}
 	return 1;
-}
+}*/
 
 void updatefood(int udata, int uquantity){
 
