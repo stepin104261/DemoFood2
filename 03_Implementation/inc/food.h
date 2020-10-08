@@ -6,7 +6,7 @@
 //#include<conio.h>
 #include<string.h>
 //#include<windows.h>
-#include<time.h>
+//#include<time.h>
 
 /// Update & Insert Function
 void insertfirst(int data, char foodname[25], int quantity, float price);
