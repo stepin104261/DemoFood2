@@ -21,7 +21,7 @@ int main(){
 	loadingbar();
 	cls();
 	pwelcome();
-	Sleep(300);
+	//Sleep(300);
 	cls();
 
 	int c=0; int any;
@@ -37,7 +37,7 @@ int main(){
 	head = NULL;
 	insertfirst(1,"Burger  ",23,120.23);
 	insertend(2,"Pizza  ",13,100.67);
-	insertend(3,"Chocolate Cake",8,720.83);
+	insertend(3,"Chocolate  ",8,720.83);
 	insertend(4,"Coffee  ",46,70.23);
 	insertend(5,"Ice-Cream  ",46,70.23);
 	insertend(6,"Sandwich  ",34,60.23);
@@ -72,8 +72,7 @@ int main(){
 			int admin_panel_choice;
 			adminpanelchoice:
 
-
-			cls(); middle1() ;   pre(4);  printf("1. Main Menu\n\n\t"); Sleep(300);
+			cls(); middle1() ;   pre(4);  printf("1. Main Menu\n\n\t"); //Sleep(300);
 			printf("Please Enter Password or ( 1 to Back in Main Menu ) : ");
 
 
@@ -89,17 +88,25 @@ int main(){
 
 				cls();  br(5); pre(4); echo("You are on Admin Panel\n\n");
 				pre(4);
-				printf(" 1. Total Cash Today \n\n");Sleep(250);pre(4);
-				printf(" 2. View Card Pay \n\n");Sleep(250);pre(4);
-				printf(" 3. Add Food \n\n");Sleep(250);pre(4);
-				printf(" 4. Delete Food \n\n");Sleep(250);pre(4);
-				printf(" 5. Instant Food List \n\n");Sleep(250);pre(4);
-				printf(" 6. Item Counter \n\n");Sleep(250);pre(4);
-				printf(" 7. Backup System\n\n");Sleep(250);pre(4);
-				printf(" 8. Instant Order Preview\n\n");Sleep(250);pre(4);
+				printf(" 1. Total Cash Today \n\n");//Sleep(250);
+				pre(4);
+				printf(" 2. View Card Pay \n\n");//Sleep(250);
+				pre(4);
+				printf(" 3. Add Food \n\n");//Sleep(250);
+				pre(4);
+				printf(" 4. Delete Food \n\n");//Sleep(250);
+				pre(4);
+				printf(" 5. Instant Food List \n\n");//Sleep(250);
+				pre(4);
+				printf(" 6. Item Counter \n\n");//Sleep(250);
+				pre(4);
+				printf(" 7. Backup System\n\n");//Sleep(250);
+				pre(4);
+				printf(" 8. Instant Order Preview\n\n");//Sleep(250);
+				pre(4);
 				printf(" 0. Main Menu \n\n");
 				printf("Enter Your From 1-0: ");
-				Sleep(250);
+				//Sleep(250);
 
 				int adminchoice;
 
@@ -109,7 +116,7 @@ int main(){
 
 					cls();  middle1(); pre(4);   printf("Todays Total Cash : %0.2f  \n",totalmoney);
 
-					Sleep(2000);
+					//Sleep(2000);
 
 					goto adminchoice;
 				}
@@ -127,7 +134,7 @@ int main(){
 
 							printf("|  %d  | %0.2f |\n",cardno[z],cardmoney[z]);pre(4);
 							printf("------------------------------\n");pre(4);
-							Sleep(150);
+							//Sleep(150);
 
 						}
 						Sleep(1500);
@@ -289,13 +296,13 @@ int main(){
 				else if(adminchoice==8){
 
 					cls();br(2);pre(2);
-					ccolor(26);
-					printf("\n\t\t"); ccolor(240);
-					printf("______________________________________________________ "); ccolor(26);
-					printf("\n\t\t");  ccolor(240);
-					printf("|  Order No.  |   Food Name   |  Quantity |  In Stock |"); ccolor(26);
-					printf("\n\t\t");  ccolor(240);
-					printf("------------------------------------------------------"); ccolor(26);
+					//ccolor(26);
+					printf("\n\t\t"); //ccolor(240);
+					printf("______________________________________________________ "); //ccolor(26);
+					printf("\n\t\t");  //ccolor(240);
+					printf("|  Order No.  |   Food Name   |  Quantity |  In Stock |"); //ccolor(26);
+					printf("\n\t\t");  //ccolor(240);
+					printf("------------------------------------------------------"); //ccolor(26);
 					for(int o=1;o<=order;o++){
 						order_view(total_order[o],order_quantity[o],o);
 					}
@@ -412,7 +419,6 @@ int main(){
 
 			int payment;
 			payment:
-
 
 			fflush(stdin);  scanf("%d",&payment);
 
@@ -535,12 +541,14 @@ int main(){
 	}  ///end get food choice
 }
 
-//functions
 void cls(){
+
 	system("cls");
+
 }
 
 void echo(char print[]){
+
 	printf("%s",print);
 }
 
@@ -565,8 +573,8 @@ void span(int space){
 
 }
 
-void main_menu()
-{
+void main_menu(){
+
 	cls();
 	br(5); pre(3); echo("===> 1. Food List"); Sleep(400);
 	br(2); pre(3); echo("===> 2. Admin Panel"); Sleep(400);
@@ -574,6 +582,7 @@ void main_menu()
 	//   br(2); pre(3); echo("=> 4. Admin Panel");  Sleep(400);
 
 	br(1);
+
 }
 
 void insertend(int data, char foodname[25], int quantity, float price){
@@ -658,7 +667,7 @@ void insertmid(int pos, int data, char foodname[25], int quantity, float price){
 	//    free(temp);
 }
 
-/*int deletefood(int serial){
+int deletefood(int serial){
 
 	node *temp;
 	temp=(node *)malloc(sizeof(node));
@@ -701,7 +710,7 @@ void insertmid(int pos, int data, char foodname[25], int quantity, float price){
 		list=head;
 	}
 	return 1;
-}*/
+}
 
 void updatefood(int udata, int uquantity){
 
@@ -744,14 +753,14 @@ int countitem(){
 }
 void foodlist(){
 
-	ccolor(26);
+	//ccolor(26);
 
-	printf("\n\t\t"); ccolor(240);
-	printf("______________________________________________________ ");ccolor(26);
-	printf("\n\t\t"); ccolor(240);
-	printf("|  Food No.  |   Food Name   |  Price  |   In Stock   |");ccolor(26);
-	printf("\n\t\t"); ccolor(240);
-	printf("-------------------------------------------------------");ccolor(26);
+	printf("\n\t\t"); //ccolor(240);
+	printf("______________________________________________________ ");//ccolor(26);
+	printf("\n\t\t"); //ccolor(240);
+	printf("|  Food No.  |   Food Name   |  Price  |   In Stock   |");//ccolor(26);
+	printf("\n\t\t"); //ccolor(240);
+	printf("-------------------------------------------------------");//ccolor(26);
 
 	node *temp;
 
@@ -759,13 +768,13 @@ void foodlist(){
 
 	while(temp != NULL){
 
-		ccolor(26);
+		//ccolor(26);
 
 
-		printf("\n\t\t"); ccolor(62);
+		printf("\n\t\t"); //ccolor(62);
 		printf("|     %d      |    %s  |    %0.2f   |    %d    |",temp->data,temp->foodname, temp->price, temp->quantity);
-		ccolor(26);
-		printf("\n\t\t"); ccolor(62);
+		//ccolor(26);
+		printf("\n\t\t"); //ccolor(62);
 		printf("-------------------------------------------------------");
 
 
@@ -775,7 +784,7 @@ void foodlist(){
 
 	}
 
-	ccolor(26);
+	//ccolor(26);
 
 	//  free(temp);
 
@@ -786,7 +795,7 @@ void order_view(int order, int quantity, int or_no){
 
 
 
-	ccolor(26);
+	//ccolor(26);
 
 	node *temp;
 
@@ -799,35 +808,35 @@ void order_view(int order, int quantity, int or_no){
 	}
 	if(temp->data == order){
 
-		ccolor(26);
+		//ccolor(26);
 
-		printf("\n\t\t"); ccolor(62);
+		printf("\n\t\t"); //ccolor(62);
 		printf("|     %d      |    %s  |     %d     |     %d     |",or_no,temp->foodname,quantity,temp->quantity);
-		ccolor(26);
-		printf("\n\t\t"); ccolor(62);
+		//ccolor(26);
+		printf("\n\t\t"); //ccolor(62);
 		printf("-------------------------------------------------------");
 
 		Sleep(100);
 
 	}
 
-	ccolor(26);
+	//ccolor(26);
 
 }
 
-void ccolor(int clr){
+/*void ccolor(int clr){
 
 	HANDLE  hConsole;
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hConsole, clr);
 
-}
+}*/
 
 
-///HEERE PRINTF STYLE FUNCTION
+///HERE PRINTF STYLE FUNCTION
 
 void pwelcome(){
-	ccolor(26);
+	//ccolor(26);
 
 	char welcome[50]="WELCOME";
 	char welcome2[50]=" TO";
@@ -835,51 +844,51 @@ void pwelcome(){
 	char welcome4[50]=" MANAGEMENT SYSTEM";
 	printf("\n\n\n\n\n\t\t\t");
 	for(int wlc=0; wlc<strlen(welcome);wlc++){
-             ccolor(120+(wlc*9));
+             //ccolor(120+(wlc*9));
 
 		printf(" %c",welcome[wlc]);
 		Sleep(200);
 	}
-	ccolor(26);
+	//ccolor(26);
 	printf("\n\n\t\t\t\t ");
 	for(int wlc2=0; wlc2<strlen(welcome2) ;wlc2++){
-            ccolor(160+(wlc2*9));
+            //ccolor(160+(wlc2*9));
 
 		printf(" %c",welcome2[wlc2]);
 		Sleep(200);
 	}
-	ccolor(26);
+	//ccolor(26);
 	printf("\n\n\n\t\t\t ");
 	for(int wlc3=0; wlc3<strlen(welcome3) ;wlc3++){
 		if(welcome3[wlc3]!='D'){
-		    ccolor(121+(wlc3*4));
+		    //ccolor(121+(wlc3*4));
 
 			printf(" %c",welcome3[wlc3]);
 		}
 		else{
-		    ccolor(11);
+		    //ccolor(11);
 
 			printf(" %c",welcome3[wlc3]);
 		}
 
 		Sleep(200);
 	}
-	ccolor(26);
+	//ccolor(26);
 	printf("\n\n\n\t\t\t\t ");
 	for(int wlc3=0; wlc3<strlen(welcome4) ;wlc3++){
 		if(welcome4[wlc3]!='A' && welcome4[wlc3]!='E'){
-                ccolor(121+(wlc3*4));
+                //ccolor(121+(wlc3*4));
 
 			printf(" %c",welcome4[wlc3]);
 		}
 		else{
-		    ccolor(11);
+		    //ccolor(11);
 
 			printf(" %c",welcome4[wlc3]);
 		}
 		Sleep(200);
 	}
-	ccolor(26);
+	//ccolor(26);
 
 }
 void loadingbar(void){
@@ -887,7 +896,7 @@ void loadingbar(void){
 	for (int i=15;i<=100;i+=5){
 
 		cls();
-		ccolor(26);
+		//ccolor(26);
 
 		printf("\n\n\n\n\n\n\n\t\t\t\t");
 		printf("%d %% Loading...\n\n\t\t",i);
@@ -896,9 +905,9 @@ void loadingbar(void){
 
 		for (int j=0; j<i;j+=2){
 
-			ccolor(160+j);
+			//ccolor(160+j);
 			printf(" ");
-			ccolor(26);
+			//ccolor(26);
 
 		}
 		Sleep(100);
@@ -914,7 +923,7 @@ void backuploader(void){
 	for (int i=15;i<=100;i+=5){
 
 		cls();
-		ccolor(26);
+		//ccolor(26);
 
 		printf("\n\n\n\n\n\n\n\t\t\t\t");
 		printf("%d %% Backing UP DATA...\n\n\t\t",i);
@@ -923,9 +932,9 @@ void backuploader(void){
 
 		for (int j=0; j<i;j+=2){
 
-			ccolor(120+j);
+			//ccolor(120+j);
 			printf(" ");
-			ccolor(26);
+			//ccolor(26);
 
 		}
 		Sleep(50);
@@ -933,7 +942,9 @@ void backuploader(void){
 			Sleep(50);
 		}
 	}
+
 }
+
 
 void middle1(void){
 
