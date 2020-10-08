@@ -153,13 +153,17 @@ int deletefood(int serial){
 
 			temp->next = temp->next->next;
 			cls();
-			printf("\n\n\n\n\t\t\tDeleting Item %d ",serial);for(int cs=0;cs<4;cs++){printf(" .");Sleep(400);}
+			printf("\n\n\n\n\t\t\tDeleting Item %d ",serial);
+			for(int cs=0;cs<4;cs++)
+			{
+				printf(" .");Sleep(400);
+			}
 
-			printf("\n\n\n\n\t\t\tDeleted Successfully \n"); Sleep(500);
+			printf("\n\n\n\n\t\t\tDeleted Successfully \n"); //Sleep(500);
 
 		}
 		else{
-			printf("\n\n\n\n\t\t\tFood Item Not Found\n"); Sleep(500);
+			printf("\n\n\n\n\t\t\tFood Item Not Found\n"); //Sleep(500);
 		}
 
 		head = temp ;
@@ -169,9 +173,10 @@ int deletefood(int serial){
 
 		temp = temp->next;
 		cls();
-		printf("\n\n\n\n\t\t\tDeleting Item %d ",serial);for(int cs=0;cs<4;cs++){printf(" .");Sleep(400);}
+		printf("\n\n\n\n\t\t\tDeleting Item %d ",serial);
+		for(int cs=0;cs<4;cs++){printf(" .");//Sleep(400);}
 
-		printf("\n\n\n\n\t\t\tDeleted Successfully \n"); Sleep(500);
+		printf("\n\n\n\n\t\t\tDeleted Successfully \n"); //Sleep(500);
 
 		head = temp ;
 
