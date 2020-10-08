@@ -381,8 +381,6 @@ int main(){
 
 		fflush(stdin); scanf("%d",&fcquantity); cls();
 
-
-
 		if(fcquantity==0){
 			cls(); middle1();pre(3); printf("Quantity Can not be Zero "); Sleep(2000);
 			cls();
