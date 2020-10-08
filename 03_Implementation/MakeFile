@@ -1,6 +1,5 @@
 PROJECT_NAME = Food Order
 
-
 BUILD = build
 
 # All source code files
